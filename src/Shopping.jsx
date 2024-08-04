@@ -1,25 +1,26 @@
-import { Link, Outlet, useParams } from 'react-router-dom';
-import DefaultPage from './DefaultPage.jsx';
-import Page1 from "./Page1.jsx";
-import Page2 from "./Page2.jsx";
-import NavBar from './NavBar.jsx';
+import { useParams, useOutletContext } from 'react-router-dom';
+import DefaultPage from './DefaultPage';
+import Page1 from "./Page1";
+import Page2 from "./Page2";
+import React from 'react';
+import Card from './Card';
 
-function Shopping () {
-    const { name } = useParams();
+const Shopping = () => {
+  const { Cart, updateCart } = useOutletContext();
+  const { name } = useParams();
 
-    return (
-        <>
-          <NavBar />
-          <h1>This is the shopping page</h1>
-          {name === "Page1" ? (
-            <Page1 />
-          ) : name === "Page2" ? (
-            <Page2 /> 
-          ) : (
-            <DefaultPage />
-          )}
-        </>
-      )
-    }
-    
-export default Shopping
+  return (
+    <>
+      <h1>This is the shopping page</h1>
+      {name === "Page1" ? (
+        <Page1 Cart={Cart} updateCart={updateCart} />
+      ) : name === "Page2" ? (
+        <Page2 Cart={Cart} updateCart={updateCart} />
+      ) : (
+        <DefaultPage Cart={Cart} updateCart={updateCart} />
+      )}
+    </>
+  );
+};
+
+export default Shopping;

@@ -37,7 +37,6 @@ class Card extends Component {
                 </form>
                 <button onClick={this.handleIncreaseChange}>+</button>
                 <button onClick={this.handleDecreaseChange}>-</button>
-                <div>Cart: {this.props.Cart}</div>
             </>
         )
     }

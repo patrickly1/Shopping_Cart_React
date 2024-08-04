@@ -1,12 +1,17 @@
 import { Link } from "react-router-dom";
+import Card from "./Card";
 
-function Page1() {
+const Page1 = ({ Cart, updateCart }) => {
     return (
-        <>
-          <h1>Page 1</h1>
+      <>
+        <p>Insert items here. Page1</p>
+        <Card Cart={Cart} updateCart={updateCart} />
+        <div>
           <Link to="/">Back to Main Page</Link>
-        </>
-      )
-}
+        </div>
+        <Link to="/Purchase">Purchase your items</Link>
+      </>
+    );
+  };
 
 export default Page1
