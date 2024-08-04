@@ -28,9 +28,16 @@ class Card extends Component {
     };
 
     render() {
+        const { title, image } = this.props;
+
         return (
             <>
-                <div>Insert image here</div>
+                <div>
+                    <img src={image} alt={title} style={{ width: '100px', height: '100px' }} />
+                </div>
+                <div>
+                    {title}
+                </div>
                 <form onSubmit={this.handleSubmitChange}>
                     <input type="number" name="cartValue" />
                     <button type="submit">Submit</button>
