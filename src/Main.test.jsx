@@ -1,11 +1,11 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
-import Home from "./Home";
+import Shopping from "./Shopping";
 
 describe("Home component", () => {
   it("renders correct Home heading", () => {
-    render(<Home />);
+    render(<Shopping />);
     const heading = screen.getByText(/This is the home page/i);
     expect(heading).toBeInTheDocument();
   });

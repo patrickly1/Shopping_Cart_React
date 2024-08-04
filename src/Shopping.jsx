@@ -2,13 +2,15 @@ import { Link, Outlet, useParams } from 'react-router-dom';
 import DefaultPage from './DefaultPage.jsx';
 import Page1 from "./Page1.jsx";
 import Page2 from "./Page2.jsx";
+import NavBar from './NavBar.jsx';
 
-function Home () {
+function Shopping () {
     const { name } = useParams();
 
     return (
         <>
-          <h1>This is the home page</h1>
+          <NavBar />
+          <h1>This is the shopping page</h1>
           {name === "Page1" ? (
             <Page1 />
           ) : name === "Page2" ? (
@@ -20,5 +22,4 @@ function Home () {
       )
     }
     
-export default Home
-
+export default Shopping

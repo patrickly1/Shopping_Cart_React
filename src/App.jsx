@@ -1,15 +1,41 @@
 import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
+import NavBar from './NavBar';
+import Card from './Card';
+import Shopping from './Shopping';
 
-function App() {
+class App extends Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <>
-      <h1>Hello</h1>
-      <Link to="Home/DefaultPage">Default Home Page</Link>
-      <Link to="Home/Page1">Page 1 Home Page</Link>
-      <Link to="Home/Page2">Page 2 Home Page</Link>
-    </>
-  )
+    this.state = {
+      Cart: 0,
+    };
+
+    this.handleCart = this.handleCart.bind(this);
+  }
+
+  handleCart(newCartValue) {
+    this.setState({Cart: newCartValue });
+  }
+  render () {
+    return (
+      <>
+        <NavBar Cart={this.state.Cart} />
+        <h1>Hello this is the first page</h1>
+        <Card Cart={this.state.Cart} updateCart={this.handleCart} />
+        <div>
+          <Link to="Shopping/DefaultPage">Default Shopping Page</Link>
+        </div>
+        <div>
+          <Link to="Shopping/Page2">Page 2 Shopping Page</Link>
+        </div>
+        <div>
+          <Link to="Shopping/Page1">Page 1 Shopping Page</Link>
+        </div>
+      </>
+    )
+  }
 }
 
 export default App
