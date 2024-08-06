@@ -1,21 +1,20 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
 import Card from "./Card";
+import React, { useState, useEffect } from "react"; 
 
-const Page1 = ({ Cart, updateCart }) => {
+const Page3 = ({ Cart, updateCart }) => {
     const [cardData, setCardData] = useState([]);
 
     useEffect(() => {
-        fetch('https://fakestoreapi.com/products/category/women%27s%20clothing')
+        fetch('https://fakestoreapi.com/products/category/jewelery')
             .then(res=>res.json())
             .then(json=>setCardData(json))
             .catch(error => console.error("Error fetching data:", error));
     }, []);
-
     return (
       <>
-        <h2>Women's clothing</h2>
-        <div className="Card2">
+        <h2>Jewelery</h2>
+        <div className="Card3">
             {cardData.map((card, index) => (
                 <Card
                     key={index}
@@ -38,4 +37,4 @@ const Page1 = ({ Cart, updateCart }) => {
     );
   };
 
-export default Page1;
+export default Page3;

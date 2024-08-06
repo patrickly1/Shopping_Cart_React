@@ -2,8 +2,8 @@ import { useParams, useOutletContext } from 'react-router-dom';
 import DefaultPage from './DefaultPage';
 import Page1 from "./Page1";
 import Page2 from "./Page2";
+import Page3 from "./Page3";
 import React from 'react';
-import Card from './Card';
 
 const Shopping = () => {
   const { Cart, updateCart } = useOutletContext();
@@ -16,6 +16,8 @@ const Shopping = () => {
         <Page1 Cart={Cart} updateCart={updateCart} />
       ) : name === "Page2" ? (
         <Page2 Cart={Cart} updateCart={updateCart} />
+      ) : name === "Page3" ? (
+        <Page3 Cart={Cart} updateCart={updateCart} />
       ) : (
         <DefaultPage Cart={Cart} updateCart={updateCart} />
       )}

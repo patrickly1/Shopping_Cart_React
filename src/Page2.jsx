@@ -1,12 +1,22 @@
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import cardData3 from "./Data/CardDate3";
+import React, { useState, useEffect } from "react";
 
 const Page2 = ({ Cart, updateCart }) => {
+    const [cardData, setCardData] = useState([]);
+
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products/category/electronics')
+            .then(res=>res.json())
+            .then(json=>setCardData(json))
+            .catch(error => console.error("Error fetching data:", error));
+    }, []);
+
     return (
       <>
-        <div class="Card3">
-            {cardData3.map((card, index) => (
+        <h2>Electronics</h2>
+        <div className="Card3">
+            {cardData.map((card, index) => (
                 <Card
                     key={index}
                     title={card.title}
@@ -16,7 +26,7 @@ const Page2 = ({ Cart, updateCart }) => {
                 />
             ))}
         </div>
-        <div class="bottomLinks">
+        <div className="bottomLinks">
                 <div id="mainLink">
                     <Link to="/">Back to Main Page</Link>
                 </div>
