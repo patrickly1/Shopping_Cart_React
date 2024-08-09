@@ -21,7 +21,9 @@ class App extends Component {
     return (
       <>
         <NavBar Cart={this.state.Cart} />
-        <Outlet context={{ Cart: this.state.Cart, updateCart: this.handleCart }} />
+        <div className="main-content">
+          <Outlet context={{ Cart: this.state.Cart, updateCart: this.handleCart }} />
+        </div>
       </>
     );
   }

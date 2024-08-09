@@ -1,0 +1,42 @@
+.home-page-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .home-page-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
+  
+  .home-page-link-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .home-page-link-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .home-page-link {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+  }
+  
+  .home-page-link:hover {
+    color: #0056b3;
+  }
+  

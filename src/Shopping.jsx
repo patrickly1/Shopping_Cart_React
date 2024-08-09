@@ -4,6 +4,7 @@ import Page1 from "./Page1";
 import Page2 from "./Page2";
 import Page3 from "./Page3";
 import React from 'react';
+import './Styles/Shopping.css'
 
 const Shopping = () => {
   const { Cart, updateCart } = useOutletContext();
