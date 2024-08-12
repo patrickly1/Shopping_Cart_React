@@ -28,12 +28,13 @@ class Card extends Component {
   }
 
   render() {
-    const { title, image } = this.props;
+    const { title, image, price } = this.props;
 
     return (
       <div className="card-item">
         <img src={image} alt={title} />
         <h3>{title}</h3>
+        <h5>${price}</h5>
         <form onSubmit={this.handleSubmitChange}>
           <input type="number" name="cartValue" min="0" />
           <div className="card-bottom">

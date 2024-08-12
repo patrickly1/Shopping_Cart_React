@@ -22,6 +22,7 @@ const DefaultPage = ({ Cart, updateCart }) => {
             key={index}
             title={card.title}
             image={card.image}
+            price={card.price}
             Cart={Cart}
             updateCart={updateCart}
           />
