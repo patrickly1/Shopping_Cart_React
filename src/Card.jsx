@@ -12,7 +12,7 @@ class Card extends Component {
   handleSubmitChange(e) {
     e.preventDefault();
     const value = parseInt(e.target.elements.cartValue.value, 10);
-    if (!isNaN(value)) {
+    if (!isNaN(value) && value > 0) {
       this.props.updateCart(this.props.Cart + value);
     }
   }
@@ -35,7 +35,7 @@ class Card extends Component {
         <img src={image} alt={title} />
         <h3>{title}</h3>
         <form onSubmit={this.handleSubmitChange}>
-          <input type="number" name="cartValue" />
+          <input type="number" name="cartValue" min="0" />
           <div className="card-bottom">
             <button type="submit">Submit</button>
             <button onClick={this.handleIncreaseChange}>+</button>
