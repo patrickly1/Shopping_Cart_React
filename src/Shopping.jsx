@@ -6,21 +6,20 @@ import Page3 from "./Page3";
 import React from 'react';
 import './Styles/Shopping.css'
 
-const Shopping = () => {
-  const { Cart, updateCart } = useOutletContext();
+const Shopping = ({ Cart, updateCart, Price, updatePrice}) => {
   const { name } = useParams();
 
   return (
     <>
       <h1>This is the shopping page</h1>
       {name === "Page1" ? (
-        <Page1 Cart={Cart} updateCart={updateCart} />
+        <Page1 Cart={Cart} updateCart={updateCart} Price={Price} updatePrice={updatePrice}/>
       ) : name === "Page2" ? (
-        <Page2 Cart={Cart} updateCart={updateCart} />
+        <Page2 Cart={Cart} updateCart={updateCart} Price={Price} updatePrice={updatePrice}/>
       ) : name === "Page3" ? (
-        <Page3 Cart={Cart} updateCart={updateCart} />
+        <Page3 Cart={Cart} updateCart={updateCart} Price={Price} updatePrice={updatePrice}/>
       ) : (
-        <DefaultPage Cart={Cart} updateCart={updateCart} />
+        <DefaultPage Cart={Cart} updateCart={updateCart} Price={Price} updatePrice={updatePrice}/>
       )}
     </>
   );

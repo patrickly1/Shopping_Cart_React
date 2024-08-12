@@ -12,18 +12,24 @@ class Card extends Component {
   handleSubmitChange(e) {
     e.preventDefault();
     const value = parseInt(e.target.elements.cartValue.value, 10);
+    const { price } = this.props
     if (!isNaN(value) && value > 0) {
       this.props.updateCart(this.props.Cart + value);
+      this.props.updatePrice(this.props.Price + (value * price));
     }
   }
 
   handleIncreaseChange() {
+    const { price } = this.props
     this.props.updateCart(this.props.Cart + 1);
+    this.props.updatePrice(this.props.Price + price);
   }
 
   handleDecreaseChange() {
+    const { price } = this.props
     if (this.props.Cart > 0) {
       this.props.updateCart(this.props.Cart - 1);
+      this.props.updatePrice(this.props.Price - price);
     }
   }
 

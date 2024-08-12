@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import './Styles/DefaultPage.css'; // Import the CSS file
+import './Styles/DefaultPage.css'; 
 
-const DefaultPage = ({ Cart, updateCart }) => {
+const DefaultPage = ({ Cart, updateCart, Price, updatePrice }) => {
   const [cardData, setCardData] = useState([]);
 
   useEffect(() => {
@@ -25,6 +25,8 @@ const DefaultPage = ({ Cart, updateCart }) => {
             price={card.price}
             Cart={Cart}
             updateCart={updateCart}
+            Price={Price}
+            updatePrice={updatePrice}
           />
         ))}
       </div>

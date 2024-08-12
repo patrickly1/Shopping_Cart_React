@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Styles/NavBar.css"; // Ensure this path is correct
+import "./Styles/NavBar.css"; 
 
-const NavBar = ({ Cart }) => {
+const NavBar = ({ Cart, Price}) => {
+
+
   return (
     <div className="navbar">
       <div className="navbar-container">
@@ -13,8 +15,14 @@ const NavBar = ({ Cart }) => {
           <Link to="/shopping/Page2">Electronics</Link>
           <Link to="/shopping/Page3">Jewelery</Link>
         </div>
-        <div className="navbar-cart">
-          Cart ({Cart}) <Link to="/Purchase">Checkout</Link>
+        <div className="nvbar-right"> 
+          <div className="navbar-cart">
+            Cart ({Cart}) 
+          </div>
+          <Link to="/Purchase">Checkout</Link>
+          <div className="navbar-price">
+            Price: ${Price.toFixed(2)}
+          </div>
         </div>
       </div>
     </div>

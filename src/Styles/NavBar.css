@@ -6,50 +6,34 @@
     z-index: 1000; 
     border-bottom: 1px solid #e7e7e7; 
     padding: 15px; 
-  }
+}
   
-  .navbar-container {
+.navbar-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
+}
   
-  .navbar-links {
+.navbar-links {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
-  }
+    gap: 20px; 
+}
   
-  .navbar-links a {
-    text-decoration: none;
-    color: #007bff;
-    font-size: 1.1em;
-    transition: color 0.3s ease;
-  }
+.navbar-links,
+  .navbar-price {
+    flex: 1; 
+}
   
-  .navbar-links a:hover {
-    color: #0056b3;
-  }
+.navbar-cart a {
+    margin-left: 10px;
+}
+
+.navbar-right {
+  justify-content: right;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
   
-  .navbar-cart {
-    margin-top: 20px;
-    font-size: 1.2em;
-  }
-  
-  .navbar-cart a {
-    text-decoration: none;
-    color: #28a745;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-cart a:hover {
-    color: #218838;
-  }
-  
-  .main-content {
-    margin-top: 80px; 
-  }
   

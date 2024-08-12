@@ -3,7 +3,7 @@ import Card from './Card';
 import React, { useState, useEffect } from "react";
 import './Styles/Pages.css'
 
-const Page2 = ({ Cart, updateCart }) => {
+const Page2 = ({ Cart, updateCart, Price, updatePrice}) => {
     const [cardData, setCardData] = useState([]);
 
     useEffect(() => {
@@ -25,6 +25,8 @@ const Page2 = ({ Cart, updateCart }) => {
                     price={card.price}
                     Cart={Cart}
                     updateCart={updateCart}
+                    Price={Price}
+                    updatePrice={updatePrice}
                 />
             ))}
         </div>
