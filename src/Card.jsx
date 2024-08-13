@@ -31,9 +31,11 @@ class Card extends Component {
   }
 
   //Similar function for - button
+  //User is only allowed to remove from cart if the new price and amount of items in cart
+  //is not negative. 
   handleDecreaseChange() {
     const { price } = this.props
-    if (this.props.Cart > 0) {
+    if (this.props.Cart > 0 && this.props.Price - price >= 0) {
       this.props.updateCart(this.props.Cart - 1);
       this.props.updatePrice(this.props.Price - price);
     }
