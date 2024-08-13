@@ -12,19 +12,25 @@ class Card extends Component {
   handleSubmitChange(e) {
     e.preventDefault();
     const value = parseInt(e.target.elements.cartValue.value, 10);
+    //Initalize price of item from props
     const { price } = this.props
+    //Only allow inputs greater than 0, do not want to add negative items to cart
     if (!isNaN(value) && value > 0) {
+      //Add amount of items user has inputted to Cart
       this.props.updateCart(this.props.Cart + value);
+      //Add amount of items user has inputted multiplied by the item's price to Price
       this.props.updatePrice(this.props.Price + (value * price));
     }
   }
 
+  //Similar function for + button
   handleIncreaseChange() {
     const { price } = this.props
     this.props.updateCart(this.props.Cart + 1);
     this.props.updatePrice(this.props.Price + price);
   }
 
+  //Similar function for - button
   handleDecreaseChange() {
     const { price } = this.props
     if (this.props.Cart > 0) {
@@ -33,6 +39,7 @@ class Card extends Component {
     }
   }
 
+  //Get title, image, and price from props to render card
   render() {
     const { title, image, price } = this.props;
 

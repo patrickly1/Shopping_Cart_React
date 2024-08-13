@@ -4,8 +4,10 @@ import Card from "./Card";
 import './Styles/DefaultPage.css'; 
 
 const DefaultPage = ({ Cart, updateCart, Price, updatePrice }) => {
+  //Update cardData state when fetchingfrom API
   const [cardData, setCardData] = useState([]);
 
+  //Fetch data from FakeStoreAPI
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/category/men%27s%20clothing")
       .then((res) => res.json())

@@ -7,6 +7,7 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    //Initialize state for amount of items in cart and total cart price, respectively
     this.state = {
       Cart: 0,
       Price: 0,
@@ -16,19 +17,24 @@ class App extends Component {
     this.handlePrice = this.handlePrice.bind(this);
   }
 
+  //Update cart state
   handleCart(newCartValue) {
     this.setState({ Cart: newCartValue });
   }
 
+  //Update price state
   handlePrice(newPriceValue) {
     this.setState({ Price: newPriceValue });
   }
-
+  
   render() {
     return (
       <>
+        {/* Nav Bar on top of each page */}
         <NavBar Cart={this.state.Cart} Price={this.state.Price} />
-        <Outlet />
+         
+
+        {/* Render the Shopping Component and pass state and update functions as props */}
         <div className="main-content">
           <Shopping
             Cart={this.state.Cart} 

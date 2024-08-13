@@ -14,7 +14,7 @@
 .card-container:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  background-color: #e6f7ff; /* Light blue background on hover */
+  background-color: #e6f7ff; 
 }
 
 .card-image {
@@ -33,11 +33,11 @@
   word-wrap: break-word;
   overflow-wrap: break-word;
   color: #333;
-  transition: color 0.3s ease; /* Smooth color transition */
+  transition: color 0.3s ease; 
 }
 
 .card-container:hover .card-title {
-  color: #007bff; /* Change title color on hover */
+  color: #007bff; 
 }
 
 .card-form {

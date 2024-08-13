@@ -21,6 +21,7 @@ const NavBar = ({ Cart, Price}) => {
           </div>
           <Link to="/Purchase">Checkout</Link>
           <div className="navbar-price">
+            {/* Price rounded to two decimal points to represent correct dollar/cent format */}
             Price: ${Price.toFixed(2)}
           </div>
         </div>
