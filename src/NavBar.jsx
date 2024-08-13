@@ -15,14 +15,16 @@ const NavBar = ({ Cart, Price}) => {
           <Link to="/shopping/Page2">Electronics</Link>
           <Link to="/shopping/Page3">Jewelery</Link>
         </div>
-        <div className="nvbar-right"> 
+        <div className="navbar-right"> 
           <div className="navbar-cart">
             Cart ({Cart}) 
           </div>
-          <Link to="/Purchase">Checkout</Link>
           <div className="navbar-price">
             {/* Price rounded to two decimal points to represent correct dollar/cent format */}
             Price: ${Price.toFixed(2)}
+          <div className="navbar-checkout">
+            <Link to="/Purchase">Checkout</Link>
+          </div>
           </div>
         </div>
       </div>

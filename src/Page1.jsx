@@ -15,6 +15,7 @@ const Page1 = ({ Cart, updateCart, Price, updatePrice }) => {
 
     return (
       <div className="page1-container">
+        <h1>Welcome to the Shopping Page</h1>
         <h2 className="page1-title">Women's clothing</h2>
         <div className="card-container">
             {cardData.map((card, index) => (

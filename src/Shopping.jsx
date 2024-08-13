@@ -14,7 +14,6 @@ const Shopping = ({ Cart, updateCart, Price, updatePrice}) => {
   // If none, show home page
   return (
     <>
-      <h1>Welcome to the Shopping Page</h1>
       {name === "Page1" ? (
         <Page1 Cart={Cart} updateCart={updateCart} Price={Price} updatePrice={updatePrice}/>
       ) : name === "Page2" ? (

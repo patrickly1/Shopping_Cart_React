@@ -17,6 +17,7 @@ const DefaultPage = ({ Cart, updateCart, Price, updatePrice }) => {
 
   return (
     <div className="default-page-container">
+      <h1>Welcome to the Shopping Page</h1>
       <h2 className="default-page-title">Men's clothing</h2>
       <div className="card-container">
         {cardData.map((card, index) => (
