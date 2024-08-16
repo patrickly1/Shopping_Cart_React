@@ -1,3 +1,5 @@
+Demo link: https://patrickly1shoppingcart.netlify.app/
+
 Created a shopping page using React.js, enabling users to browse and purchase items across multiple categories.
 
 Implemented a responsive navigation bar to display the current number of items and total price in the user's cart.
